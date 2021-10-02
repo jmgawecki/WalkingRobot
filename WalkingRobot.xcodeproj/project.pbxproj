@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF37903E2708CC3600FDE074 /* MegaRobot.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903D2708CC3600FDE074 /* MegaRobot.swift.swift */; };
+		EF3790402708CDF400FDE074 /* MainARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903F2708CDF400FDE074 /* MainARView.swift */; };
+		EF3790432708E65D00FDE074 /* MainARView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */; };
+		EF3790452708E8C300FDE074 /* MainARView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */; };
+		EF94678B27062D9700280832 /* toy_robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = EF94678A27062D9700280832 /* toy_robot.usdz */; };
+		EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */; };
+		EF9BE6892708FCBC00005114 /* MainARView+Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE6882708FCBC00005114 /* MainARView+Other.swift */; };
+		EF9BE68C2708FD3E00005114 /* MegaRobot+Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE68B2708FD3E00005114 /* MegaRobot+Mode.swift */; };
+		EFEA21132706234B0020C654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA21122706234B0020C654 /* AppDelegate.swift */; };
+		EFEA21152706234B0020C654 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA21142706234B0020C654 /* ContentView.swift */; };
+		EFEA21192706234C0020C654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEA21182706234C0020C654 /* Assets.xcassets */; };
+		EFEA211C2706234C0020C654 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEA211B2706234C0020C654 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF37903D2708CC3600FDE074 /* MegaRobot.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaRobot.swift.swift; sourceTree = "<group>"; };
+		EF37903F2708CDF400FDE074 /* MainARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARView.swift; sourceTree = "<group>"; };
+		EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Coaching.swift"; sourceTree = "<group>"; };
+		EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Gestures.swift"; sourceTree = "<group>"; };
+		EF94678A27062D9700280832 /* toy_robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot.usdz; sourceTree = "<group>"; };
+		EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Configuration.swift"; sourceTree = "<group>"; };
+		EF9BE6882708FCBC00005114 /* MainARView+Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Other.swift"; sourceTree = "<group>"; };
+		EF9BE68B2708FD3E00005114 /* MegaRobot+Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MegaRobot+Mode.swift"; sourceTree = "<group>"; };
+		EFEA210F2706234B0020C654 /* WalkingRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkingRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEA21122706234B0020C654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFEA21142706234B0020C654 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EFEA21182706234C0020C654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFEA211B2706234C0020C654 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFEA210C2706234B0020C654 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF3790412708E53F00FDE074 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EFEA211A2706234C0020C654 /* Preview Content */,
+				EFEA21182706234C0020C654 /* Assets.xcassets */,
+				EFEA21122706234B0020C654 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		EF9BE6872708FC9500005114 /* MainARView */ = {
+			isa = PBXGroup;
+			children = (
+				EF37903F2708CDF400FDE074 /* MainARView.swift */,
+				EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */,
+				EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */,
+				EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */,
+				EF9BE6882708FCBC00005114 /* MainARView+Other.swift */,
+			);
+			path = MainARView;
+			sourceTree = "<group>";
+		};
+		EF9BE68A2708FD2100005114 /* MegaRobot */ = {
+			isa = PBXGroup;
+			children = (
+				EF37903D2708CC3600FDE074 /* MegaRobot.swift.swift */,
+				EF9BE68B2708FD3E00005114 /* MegaRobot+Mode.swift */,
+			);
+			path = MegaRobot;
+			sourceTree = "<group>";
+		};
+		EFEA21062706234B0020C654 = {
+			isa = PBXGroup;
+			children = (
+				EFEA21112706234B0020C654 /* WalkingRobot */,
+				EF94678A27062D9700280832 /* toy_robot.usdz */,
+				EFEA21102706234B0020C654 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFEA21102706234B0020C654 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFEA210F2706234B0020C654 /* WalkingRobot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFEA21112706234B0020C654 /* WalkingRobot */ = {
+			isa = PBXGroup;
+			children = (
+				EF9BE6872708FC9500005114 /* MainARView */,
+				EF9BE68A2708FD2100005114 /* MegaRobot */,
+				EFEA21142706234B0020C654 /* ContentView.swift */,
+				EF3790412708E53F00FDE074 /* Support */,
+			);
+			path = WalkingRobot;
+			sourceTree = "<group>";
+		};
+		EFEA211A2706234C0020C654 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EFEA211B2706234C0020C654 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFEA210E2706234B0020C654 /* WalkingRobot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFEA211F2706234C0020C654 /* Build configuration list for PBXNativeTarget "WalkingRobot" */;
+			buildPhases = (
+				EFEA210B2706234B0020C654 /* Sources */,
+				EFEA210C2706234B0020C654 /* Frameworks */,
+				EFEA210D2706234B0020C654 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalkingRobot;
+			productName = WalkingRobot;
+			productReference = EFEA210F2706234B0020C654 /* WalkingRobot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFEA21072706234B0020C654 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					EFEA210E2706234B0020C654 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = EFEA210A2706234B0020C654 /* Build configuration list for PBXProject "WalkingRobot" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFEA21062706234B0020C654;
+			productRefGroup = EFEA21102706234B0020C654 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFEA210E2706234B0020C654 /* WalkingRobot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFEA210D2706234B0020C654 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF94678B27062D9700280832 /* toy_robot.usdz in Resources */,
+				EFEA211C2706234C0020C654 /* Preview Assets.xcassets in Resources */,
+				EFEA21192706234C0020C654 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFEA210B2706234B0020C654 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3790452708E8C300FDE074 /* MainARView+Gestures.swift in Sources */,
+				EF9BE68C2708FD3E00005114 /* MegaRobot+Mode.swift in Sources */,
+				EF3790432708E65D00FDE074 /* MainARView+Coaching.swift in Sources */,
+				EFEA21152706234B0020C654 /* ContentView.swift in Sources */,
+				EF9BE6892708FCBC00005114 /* MainARView+Other.swift in Sources */,
+				EFEA21132706234B0020C654 /* AppDelegate.swift in Sources */,
+				EF3790402708CDF400FDE074 /* MainARView.swift in Sources */,
+				EF37903E2708CC3600FDE074 /* MegaRobot.swift.swift in Sources */,
+				EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EFEA211D2706234C0020C654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFEA211E2706234C0020C654 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFEA21202706234C0020C654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 9HHDDYFD2W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jmg.TinyTankToy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFEA21212706234C0020C654 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 9HHDDYFD2W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jmg.TinyTankToy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFEA210A2706234B0020C654 /* Build configuration list for PBXProject "WalkingRobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEA211D2706234C0020C654 /* Debug */,
+				EFEA211E2706234C0020C654 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFEA211F2706234C0020C654 /* Build configuration list for PBXNativeTarget "WalkingRobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEA21202706234C0020C654 /* Debug */,
+				EFEA21212706234C0020C654 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFEA21072706234B0020C654 /* Project object */;
+}
