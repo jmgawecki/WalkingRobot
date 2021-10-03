@@ -13,12 +13,12 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
     // MARK: - Declaration
     var robot: Entity?
     var subscriptions: Set<AnyCancellable> = []
-    var animationController: AnimationPlaybackController?
+    var walkAnimationController: AnimationPlaybackController?
     var arView: ARView
-    var modeRobot: RobotMode = .initialising {
+    var currentStage: RobotStage = .initialising {
         didSet {
             print("Robot ended '\(oldValue)' mode")
-            print("Robot entered '\(modeRobot)' mode")
+            print("Robot entered '\(currentStage)' mode")
         }
     }
     var gameSettings: Settings
@@ -46,18 +46,29 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
                 // Entity should be added before the animation is started.
                 planeAnchor.addChild(robot)
                 if let walkingAnimation = robot.availableAnimations.first {
-                    self.animationController = robot.playAnimation(walkingAnimation.repeat(duration: .infinity),
+                    self.walkAnimationController = robot.playAnimation(walkingAnimation.repeat(duration: .infinity),
                                                                    transitionDuration: 1.25,
                                                                    blendLayerOffset: 0,
                                                                    separateAnimatedValue: false,
                                                                    startsPaused: false)
-                    self.animationController?.pause()
-                    robot.components[CollisionComponent.self] = CollisionComponent.init(shapes: [.generateBox(width: 0.3,
-                                                                                                              height: 0.3,
-                                                                                                              depth: 0.3)])
-                    
+                    self.walkAnimationController?.pause()
                 }
                 self.robot = robot
+            }
+            .store(in: &subscriptions)
+    }
+    
+    func loadModelAsync(to planeAnchor: AnchorEntity) {
+        ModelEntity.loadAsync(named: "model")
+            .sink { _ in
+            } receiveValue: { robot in
+                // Additional setup
+                // Collision
+                // Gestures
+                
+                // Add animation to anchor
+                planeAnchor.addChild(robot)
+                // Please remember! Animation should be added after robot is being sucesfully added
             }
             .store(in: &subscriptions)
     }
