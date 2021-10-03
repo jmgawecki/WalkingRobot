@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealityKit
 
 extension MainARView {
     func addGestureRecognisers() {
@@ -20,6 +21,27 @@ extension MainARView {
         }
         if let robot = entity(at: tapLocation) {
             print(robot.name)
+        }
+    }
+    
+    @objc func handleRobotTranslation(_ recogniser: UIGestureRecognizer) {
+        guard let translationGesture = recogniser as? EntityTranslationGestureRecognizer else { return }
+        
+        switch translationGesture.state {
+        case .began:
+            print("translation began")
+        case .ended:
+            print("translation ended")
+        case .possible:
+            fallthrough
+        case .changed:
+            fallthrough
+        case .cancelled:
+            fallthrough
+        case .failed:
+            fallthrough
+        @unknown default:
+            break
         }
     }
 }

@@ -16,6 +16,8 @@ extension MainARView {
         configuration.frameSemantics = [.personSegmentationWithDepth]
         configuration.planeDetection = [.horizontal]
         
+//        debugOptions = [.showAnchorGeometry, .showAnchorOrigins, .showFeaturePoints, .showPhysics, .showSceneUnderstanding, .showAnchorGeometry]
+        
         session.run(configuration, options: [.removeExistingAnchors])
     }
 }

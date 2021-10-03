@@ -15,7 +15,6 @@ class MainARView: ARView {
     let coachingOverlay = ARCoachingOverlayView()
     var gameSettings = Settings()
     
-    
     // MARK: - Declaration
     let planeAnchor = AnchorEntity(
         plane: .horizontal,
@@ -25,6 +24,12 @@ class MainARView: ARView {
     var robot: MegaRobot?
     var anchorEntitySubscribtion: Cancellable?
     var robotAnimationSubscribtion: Cancellable?
+    var robotTranslationSubscribtion: Cancellable?
+    var gestureRecogniser: EntityGestureRecognizer? {
+        didSet {
+            gestureRecogniser?.addTarget(self, action: #selector(handleRobotTranslation(_:)))
+        }
+    }
     
     // MARK: - Initialiser
     required init() {
@@ -50,20 +55,21 @@ class MainARView: ARView {
             self.gameSettings.gameStatus = .planeSearching
             self.anchorEntitySubscribtion = self.scene.subscribe(
                 to: SceneEvents.AnchoredStateChanged.self,
-                on: planeAnchor) { anchored in
-                    if anchored.isAnchored {
+                on: robot) { [weak self] robotEvent in
+                    guard let self = self else { return }
+                    if robotEvent.isAnchored {
+                        self.gameSettings.gameStatus = .positioning
                         robot.stage()
                         robot.walkAnimationController?.resume()
-                        robot.activateRobotDragging()
                         self.observeAnimationState()
-                        self.gameSettings.gameStatus = .positioning
+                        self.gestureRecogniser = self.installGestures(.translation, for: robot).first
                         DispatchQueue.main.async {
                             self.anchorEntitySubscribtion?.cancel()
                             self.anchorEntitySubscribtion = nil
                         }
                     }
                 }
-            self.scene.anchors.append(planeAnchor)
+            self.scene.anchors.append(robot)
         } else {
             print("Fail to load")
         }
