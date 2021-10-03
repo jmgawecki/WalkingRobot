@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2463E6270996B2009F4E0B /* MainARView+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */; };
+		EF2463E827099FF5009F4E0B /* metalShaders.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2463E727099FF5009F4E0B /* metalShaders.scnassets */; };
 		EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903D2708CC3600FDE074 /* MegaRobot.swift */; };
 		EF3790402708CDF400FDE074 /* MainARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903F2708CDF400FDE074 /* MainARView.swift */; };
 		EF3790432708E65D00FDE074 /* MainARView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+ARSessionDelegate.swift"; sourceTree = "<group>"; };
+		EF2463E727099FF5009F4E0B /* metalShaders.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = metalShaders.scnassets; sourceTree = "<group>"; };
 		EF37903D2708CC3600FDE074 /* MegaRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaRobot.swift; sourceTree = "<group>"; };
 		EF37903F2708CDF400FDE074 /* MainARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARView.swift; sourceTree = "<group>"; };
 		EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Coaching.swift"; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 				EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */,
 				EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */,
 				EF9BE6882708FCBC00005114 /* MainARView+Other.swift */,
+				EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */,
 			);
 			path = MainARView;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 				EF9BE6872708FC9500005114 /* MainARView */,
 				EF9BE68A2708FD2100005114 /* MegaRobot */,
 				EFEA21142706234B0020C654 /* ContentView.swift */,
+				EF2463E727099FF5009F4E0B /* metalShaders.scnassets */,
 				EF3790412708E53F00FDE074 /* Support */,
 			);
 			path = WalkingRobot;
@@ -174,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF94678B27062D9700280832 /* toy_robot.usdz in Resources */,
+				EF2463E827099FF5009F4E0B /* metalShaders.scnassets in Resources */,
 				EFEA211C2706234C0020C654 /* Preview Assets.xcassets in Resources */,
 				EFEA21192706234C0020C654 /* Assets.xcassets in Resources */,
 			);
@@ -191,6 +198,7 @@
 				EF3790432708E65D00FDE074 /* MainARView+Coaching.swift in Sources */,
 				EFEA21152706234B0020C654 /* ContentView.swift in Sources */,
 				EF9BE6892708FCBC00005114 /* MainARView+Other.swift in Sources */,
+				EF2463E6270996B2009F4E0B /* MainARView+ARSessionDelegate.swift in Sources */,
 				EFEA21132706234B0020C654 /* AppDelegate.swift in Sources */,
 				EF3790402708CDF400FDE074 /* MainARView.swift in Sources */,
 				EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */,

@@ -34,6 +34,7 @@ class MainARView: ARView {
         addConfiguration()
         addCoaching()
         addGestureRecognisers()
+        session.delegate = self
     }
     
     @MainActor @objc required dynamic init(frame frameRect: CGRect) {
