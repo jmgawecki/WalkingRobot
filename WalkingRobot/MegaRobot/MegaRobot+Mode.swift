@@ -52,11 +52,17 @@ extension MegaRobot {
         }
         var walkTransform = robot.transform
         
+//        let vector = robot.transform.rotation.
+//        vector.evenHalf
+        let vectorTest = SIMD2<Float>.init(x: Float.random(in: 0.1...0.5), y: Float.random(in: 0.1...0.5))
+        let test = SIMD3<Float>.init(vectorTest, robot.transform.rotation.angle)
+        
+        
         guard let translationAndTime = randomPath(from: walkTransform) else {
             return
         }
         let (translation , travelTime) = translationAndTime
-        walkTransform.translation = translation
+        walkTransform.translation = test
         
         guard let anchorEntity = robot.parent else {
             return
@@ -78,7 +84,7 @@ extension MegaRobot {
             return
         }
         var turnAroundTransform = robot.transform
-        turnAroundTransform.rotation = simd_quatf(angle: .pi * [-1.0,1.0].randomElement()!, axis: [0,1,0])
+        turnAroundTransform.rotation = simd_quatf(angle: .pi * Float.random(in: -1...1), axis: [0,1,0])
         let turnTime = Double.random(in: 3.0...6)
         
         guard let anchorEntity = robot.parent else {

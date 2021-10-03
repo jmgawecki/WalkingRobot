@@ -48,26 +48,21 @@ class MainARView: ARView {
     func observeAnchorState() {
         if let robot = robot {
             self.gameSettings.gameStatus = .planeSearching
-            // 1. Subscribe to changes
             self.anchorEntitySubscribtion = self.scene.subscribe(
                 to: SceneEvents.AnchoredStateChanged.self,
                 on: planeAnchor) { anchored in
-                    // 3. if the change is the desired one, perform extra setup
                     if anchored.isAnchored {
                         robot.stage()
                         robot.walkAnimationController?.resume()
                         robot.activateRobotDragging()
-//                        robot.components[PhysicsBodyComponent.self] = PhysicsBodyComponent.init()
                         self.observeAnimationState()
                         self.gameSettings.gameStatus = .positioning
                         DispatchQueue.main.async {
-                            // 4. Remove subscriber if further observations are not needed
                             self.anchorEntitySubscribtion?.cancel()
                             self.anchorEntitySubscribtion = nil
                         }
                     }
                 }
-            // 2. add planeAnchor to the scene
             self.scene.anchors.append(planeAnchor)
         } else {
             print("Fail to load")

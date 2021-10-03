@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EF2463E6270996B2009F4E0B /* MainARView+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */; };
 		EF2463E827099FF5009F4E0B /* metalShaders.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2463E727099FF5009F4E0B /* metalShaders.scnassets */; };
+		EF2463EB2709C367009F4E0B /* PlaneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2463EA2709C367009F4E0B /* PlaneEntity.swift */; };
+		EF2463ED2709C3B2009F4E0B /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2463EC2709C3B2009F4E0B /* UIHelper.swift */; };
 		EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903D2708CC3600FDE074 /* MegaRobot.swift */; };
 		EF3790402708CDF400FDE074 /* MainARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903F2708CDF400FDE074 /* MainARView.swift */; };
 		EF3790432708E65D00FDE074 /* MainARView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+ARSessionDelegate.swift"; sourceTree = "<group>"; };
 		EF2463E727099FF5009F4E0B /* metalShaders.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = metalShaders.scnassets; sourceTree = "<group>"; };
+		EF2463EA2709C367009F4E0B /* PlaneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneEntity.swift; sourceTree = "<group>"; };
+		EF2463EC2709C3B2009F4E0B /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		EF37903D2708CC3600FDE074 /* MegaRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaRobot.swift; sourceTree = "<group>"; };
 		EF37903F2708CDF400FDE074 /* MainARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARView.swift; sourceTree = "<group>"; };
 		EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Coaching.swift"; sourceTree = "<group>"; };
@@ -52,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF2463E92709C33A009F4E0B /* PlaneEntity */ = {
+			isa = PBXGroup;
+			children = (
+				EF2463EA2709C367009F4E0B /* PlaneEntity.swift */,
+			);
+			path = PlaneEntity;
+			sourceTree = "<group>";
+		};
 		EF3790412708E53F00FDE074 /* Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEA21112706234B0020C654 /* WalkingRobot */,
+				EF3790412708E53F00FDE074 /* Support */,
 				EF94678A27062D9700280832 /* toy_robot.usdz */,
 				EFEA21102706234B0020C654 /* Products */,
 			);
@@ -104,11 +117,12 @@
 		EFEA21112706234B0020C654 /* WalkingRobot */ = {
 			isa = PBXGroup;
 			children = (
+				EFEA21142706234B0020C654 /* ContentView.swift */,
 				EF9BE6872708FC9500005114 /* MainARView */,
 				EF9BE68A2708FD2100005114 /* MegaRobot */,
-				EFEA21142706234B0020C654 /* ContentView.swift */,
+				EF2463E92709C33A009F4E0B /* PlaneEntity */,
 				EF2463E727099FF5009F4E0B /* metalShaders.scnassets */,
-				EF3790412708E53F00FDE074 /* Support */,
+				EF2463EC2709C3B2009F4E0B /* UIHelper.swift */,
 			);
 			path = WalkingRobot;
 			sourceTree = "<group>";
@@ -201,8 +215,10 @@
 				EF2463E6270996B2009F4E0B /* MainARView+ARSessionDelegate.swift in Sources */,
 				EFEA21132706234B0020C654 /* AppDelegate.swift in Sources */,
 				EF3790402708CDF400FDE074 /* MainARView.swift in Sources */,
+				EF2463EB2709C367009F4E0B /* PlaneEntity.swift in Sources */,
 				EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */,
 				EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */,
+				EF2463ED2709C3B2009F4E0B /* UIHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
