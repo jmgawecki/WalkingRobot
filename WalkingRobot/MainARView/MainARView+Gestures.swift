@@ -29,9 +29,12 @@ extension MainARView {
         
         switch translationGesture.state {
         case .began:
-            print("translation began")
+            robot?.walkAnimationController?.pause()
         case .ended:
-            print("translation ended")
+            if robot?.currentStage != .initialising,
+               robot?.currentStage != .wait {
+                robot?.walkAnimationController?.resume()
+            }
         case .possible:
             fallthrough
         case .changed:

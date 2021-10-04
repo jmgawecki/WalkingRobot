@@ -7,7 +7,7 @@
 
 import ARKit
 
-extension MainARView {
+extension MainARView: ARCoachingOverlayViewDelegate {
     func addConfiguration() {
         guard ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentationWithDepth) else {
             fatalError("configurations are not supported for this device sorry.")
@@ -17,7 +17,14 @@ extension MainARView {
         configuration.planeDetection = [.horizontal]
         
 //        debugOptions = [.showAnchorGeometry, .showAnchorOrigins, .showFeaturePoints, .showPhysics, .showSceneUnderstanding, .showAnchorGeometry]
-        
         session.run(configuration, options: [.removeExistingAnchors])
+    }
+    
+    func addCoaching() {
+        self.coachingOverlay.delegate = self
+        self.coachingOverlay.session = self.session
+        self.coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.coachingOverlay.goal = .horizontalPlane
+        self.addSubview(coachingOverlay)
     }
 }

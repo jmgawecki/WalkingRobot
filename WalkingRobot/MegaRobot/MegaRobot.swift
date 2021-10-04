@@ -24,12 +24,13 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
     var translationGesture: EntityGestureRecognizer?
     
     // MARK: - Initialiser
-    required init(anchorEntity: AnchorEntity, arView: ARView, gameSettings: Settings) {
+    required init(gameSettings: Settings) {
         self.gameSettings = gameSettings
         super.init()
         addRobot()
         name = "Mega robot"
         addAnchoring()
+        addPhysics()
     }
 
     required init() { fatalError("init() has not been implemented") }
@@ -41,9 +42,10 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
                 guard let self = self else { return }
                 // Entity should be added before the animation is started.
                 self.robot = robot
+                
                 self.addChild(robot)
                 
-                // Will generate collision boxes automatically also for childs
+                // Will generate collision boxes automatically also for children
                 self.generateCollisionShapes(recursive: true)
 
                 if let walkingAnimation = robot.availableAnimations.first {
@@ -65,6 +67,13 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
                                                           minimumBounds: SIMD2<Float>.init(x: 1, y: 1))
         let anchorComponent = AnchoringComponent(anchorPlane)
         self.anchoring = anchorComponent
+    }
+    
+    func addPhysics() {
+//        self.physics
+//        components[PhysicsMotionComponent.self] = [PhysicsMotionComponent.init()]
+//        components[PhysicsBodyComponent.self] = [PhysicsBodyComponent.init()]
+        physicsBody?.mode = .dynamic
     }
     
 }

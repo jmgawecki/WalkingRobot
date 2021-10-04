@@ -13,7 +13,6 @@
 		EF2463ED2709C3B2009F4E0B /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2463EC2709C3B2009F4E0B /* UIHelper.swift */; };
 		EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903D2708CC3600FDE074 /* MegaRobot.swift */; };
 		EF3790402708CDF400FDE074 /* MainARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903F2708CDF400FDE074 /* MainARView.swift */; };
-		EF3790432708E65D00FDE074 /* MainARView+Coaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */; };
 		EF3790452708E8C300FDE074 /* MainARView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */; };
 		EF94678B27062D9700280832 /* toy_robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = EF94678A27062D9700280832 /* toy_robot.usdz */; };
 		EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */; };
@@ -32,7 +31,6 @@
 		EF2463EC2709C3B2009F4E0B /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		EF37903D2708CC3600FDE074 /* MegaRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaRobot.swift; sourceTree = "<group>"; };
 		EF37903F2708CDF400FDE074 /* MainARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARView.swift; sourceTree = "<group>"; };
-		EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Coaching.swift"; sourceTree = "<group>"; };
 		EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Gestures.swift"; sourceTree = "<group>"; };
 		EF94678A27062D9700280832 /* toy_robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot.usdz; sourceTree = "<group>"; };
 		EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Configuration.swift"; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				EF37903F2708CDF400FDE074 /* MainARView.swift */,
 				EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */,
 				EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */,
-				EF3790422708E65D00FDE074 /* MainARView+Coaching.swift */,
 				EF9BE6882708FCBC00005114 /* MainARView+Other.swift */,
 				EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */,
 			);
@@ -209,7 +206,6 @@
 			files = (
 				EF3790452708E8C300FDE074 /* MainARView+Gestures.swift in Sources */,
 				EF9BE68C2708FD3E00005114 /* MegaRobot+Mode.swift in Sources */,
-				EF3790432708E65D00FDE074 /* MainARView+Coaching.swift in Sources */,
 				EFEA21152706234B0020C654 /* ContentView.swift in Sources */,
 				EF9BE6892708FCBC00005114 /* MainARView+Other.swift in Sources */,
 				EF2463E6270996B2009F4E0B /* MainARView+ARSessionDelegate.swift in Sources */,

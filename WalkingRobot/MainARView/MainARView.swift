@@ -16,15 +16,9 @@ class MainARView: ARView {
     var gameSettings = Settings()
     
     // MARK: - Declaration
-    let planeAnchor = AnchorEntity(
-        plane: .horizontal,
-        classification: .any,
-        minimumBounds: [0.5,0.5]
-    )
     var robot: MegaRobot?
-    var anchorEntitySubscribtion: Cancellable?
-    var robotAnimationSubscribtion: Cancellable?
-    var robotTranslationSubscribtion: Cancellable?
+    var subscriptions: Set<AnyCancellable> = []
+    var robotAnchoringSubscription: Cancellable?
     var gestureRecogniser: EntityGestureRecognizer? {
         didSet {
             gestureRecogniser?.addTarget(self, action: #selector(handleRobotTranslation(_:)))
@@ -34,7 +28,7 @@ class MainARView: ARView {
     // MARK: - Initialiser
     required init() {
         super.init(frame: .zero)
-        robot = MegaRobot(anchorEntity: planeAnchor, arView: self, gameSettings: gameSettings)
+        robot = MegaRobot(gameSettings: gameSettings)
         observeAnchorState()
         addConfiguration()
         addCoaching()
@@ -53,7 +47,7 @@ class MainARView: ARView {
     func observeAnchorState() {
         if let robot = robot {
             self.gameSettings.gameStatus = .planeSearching
-            self.anchorEntitySubscribtion = self.scene.subscribe(
+            self.robotAnchoringSubscription = self.scene.subscribe(
                 to: SceneEvents.AnchoredStateChanged.self,
                 on: robot) { [weak self] robotEvent in
                     guard let self = self else { return }
@@ -64,8 +58,8 @@ class MainARView: ARView {
                         self.observeAnimationState()
                         self.gestureRecogniser = self.installGestures(.translation, for: robot).first
                         DispatchQueue.main.async {
-                            self.anchorEntitySubscribtion?.cancel()
-                            self.anchorEntitySubscribtion = nil
+                            self.robotAnchoringSubscription?.cancel()
+                            self.robotAnchoringSubscription = nil
                         }
                     }
                 }
@@ -77,11 +71,12 @@ class MainARView: ARView {
     
     func observeAnimationState() {
         if let robot = robot {
-            self.robotAnimationSubscribtion = self.scene.subscribe(
+            self.scene.subscribe(
                 to: AnimationEvents.PlaybackCompleted.self,
                 on: robot.robot, { _ in
                     robot.stage()
                 })
+                .store(in: &subscriptions)
         }
     }
 }
