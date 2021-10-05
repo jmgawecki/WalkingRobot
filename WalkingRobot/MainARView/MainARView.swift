@@ -25,6 +25,7 @@ class MainARView: ARView {
         }
     }
     
+    
     // MARK: - Initialiser
     required init() {
         super.init(frame: .zero)
@@ -78,5 +79,9 @@ class MainARView: ARView {
                 })
                 .store(in: &subscriptions)
         }
+    }
+    
+    func createRobot() {
+        
     }
 }

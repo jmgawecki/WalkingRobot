@@ -9,7 +9,7 @@ import Foundation
 import RealityKit
 import Combine
 
-class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
+class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics, WalkingComponent {
     // MARK: - Declaration
     var robot: Entity?
     var subscriptions: Set<AnyCancellable> = []
