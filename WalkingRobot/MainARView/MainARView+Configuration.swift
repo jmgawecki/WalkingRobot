@@ -17,6 +17,10 @@ extension MainARView: ARCoachingOverlayViewDelegate {
         configuration.planeDetection = [.horizontal]
         
 //        debugOptions = [.showAnchorGeometry, .showAnchorOrigins, .showFeaturePoints, .showPhysics, .showSceneUnderstanding, .showAnchorGeometry]
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.meshWithClassification) {
+            configuration.sceneReconstruction = .meshWithClassification
+        }
+        
         session.run(configuration, options: [.removeExistingAnchors])
     }
     
