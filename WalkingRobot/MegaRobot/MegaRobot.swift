@@ -14,12 +14,12 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
     var robot: Entity?
     var subscriptions: Set<AnyCancellable> = []
     var walkAnimationController: AnimationPlaybackController?
-    var currentStage: RobotStage = .initialising {
-        didSet {
-            print("Robot ended '\(oldValue)' mode")
-            print("Robot entered '\(currentStage)' mode")
-        }
-    }
+//    var currentStage: RobotStage = .initialising {
+//        didSet {
+//            print("Robot ended '\(oldValue)' mode")
+//            print("Robot entered '\(currentStage)' mode")
+//        }
+//    }
     var gameSettings: Settings
     var translationGesture: EntityGestureRecognizer?
     
@@ -30,7 +30,10 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
         addRobot()
         name = "Mega robot"
         addAnchoring()
-        addPhysics()
+        components[MotionComponent.self] = MotionComponent()
+        components[WanderAimlesslyComponent.self] = WanderAimlesslyComponent()
+        components[SettingsComponent.self] = SettingsComponent(settings: Settings())
+//        components[WalkComponent.self] = .init()
     }
 
     required init() { fatalError("init() has not been implemented") }
@@ -54,7 +57,7 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
                                                                    blendLayerOffset: 0,
                                                                    separateAnimatedValue: false,
                                                                    startsPaused: false)
-                    self.walkAnimationController?.pause()
+//                    self.walkAnimationController?.pause()
                 }
                 self.robot = robot
             }
@@ -69,11 +72,11 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
         self.anchoring = anchorComponent
     }
     
-    func addPhysics() {
-//        self.physics
-//        components[PhysicsMotionComponent.self] = [PhysicsMotionComponent.init()]
-//        components[PhysicsBodyComponent.self] = [PhysicsBodyComponent.init()]
-        physicsBody?.mode = .dynamic
-    }
-    
+//    func addPhysics() {
+////        self.physics
+////        components[PhysicsMotionComponent.self] = [PhysicsMotionComponent.init()]
+////        components[PhysicsBodyComponent.self] = [PhysicsBodyComponent.init()]
+//        physicsBody?.mode = .dynamic
+//    }
+//
 }

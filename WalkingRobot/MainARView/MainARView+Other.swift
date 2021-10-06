@@ -15,16 +15,16 @@ enum GameStatus {
     case finished
 }
 
-class Settings {
-    var robotSpeed: Float = 0.03 // m/s
-    
-    var gameStatus: GameStatus = .initCoaching {
-        didSet {
-            print("status was: \(oldValue)")
-            print("status is: \(gameStatus)")
-        }
-    }
-}
+//class Settings {
+//    var robotSpeed: Float = 0.03 // m/s
+//    
+//    var gameStatus: GameStatus = .initCoaching {
+//        didSet {
+//            print("status was: \(oldValue)")
+//            print("status is: \(gameStatus)")
+//        }
+//    }
+//}
 
 extension MainARView {
         // Counts the distance between the camera and the robot, use for running away if too close

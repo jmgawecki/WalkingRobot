@@ -21,18 +21,33 @@ class MainARView: ARView {
     var robotAnchoringSubscription: Cancellable?
     var gestureRecogniser: EntityGestureRecognizer? {
         didSet {
-            gestureRecogniser?.addTarget(self, action: #selector(handleRobotTranslation(_:)))
+//            gestureRecogniser?.addTarget(self, action: #selector(handleRobotTranslation(_:)))
         }
     }
     
     // MARK: - Initialiser
     required init() {
         super.init(frame: .zero)
-        robot = MegaRobot(gameSettings: gameSettings)
-        observeAnchorState()
+//        robot = MegaRobot(gameSettings: gameSettings)
+        
+        let plane = AnchorEntity(plane: .horizontal, classification: .any, minimumBounds: [1,1])
+        scene.addAnchor(plane)
+        
+        let box = ModelEntity.loadAsync(named: "toy_robot")
+            .sink { _ in
+                print("completed")
+            } receiveValue: { robot in
+                robot.components[MotionComponent.self] = MotionComponent()
+                robot.components[WanderAimlesslyComponent.self] = WanderAimlesslyComponent()
+                robot.components[SettingsComponent.self] = SettingsComponent(settings: Settings())
+                plane.addChild(robot)
+            }
+            .store(in: &subscriptions)
+
+//        observeAnchorState()
         addConfiguration()
         addCoaching()
-        addGestureRecognisers()
+//        addGestureRecognisers()
         session.delegate = self
     }
     
@@ -46,16 +61,16 @@ class MainARView: ARView {
     
     func observeAnchorState() {
         if let robot = robot {
-            self.gameSettings.gameStatus = .planeSearching
+//            self.gameSettings.gameStatus = .planeSearching
             self.robotAnchoringSubscription = self.scene.subscribe(
                 to: SceneEvents.AnchoredStateChanged.self,
                 on: robot) { [weak self] robotEvent in
                     guard let self = self else { return }
                     if robotEvent.isAnchored {
-                        self.gameSettings.gameStatus = .positioning
-                        robot.stage()
-                        robot.walkAnimationController?.resume()
-                        self.observeAnimationState()
+//                        self.gameSettings.gameStatus = .positioning
+//                        robot.stage()
+//                        robot.walkAnimationController?.resume()
+//                        self.observeAnimationState()
                         self.gestureRecogniser = self.installGestures(.translation, for: robot).first
                         DispatchQueue.main.async {
                             self.robotAnchoringSubscription?.cancel()
@@ -74,7 +89,7 @@ class MainARView: ARView {
             self.scene.subscribe(
                 to: AnimationEvents.PlaybackCompleted.self,
                 on: robot.robot, { _ in
-                    robot.stage()
+//                    robot.stage()
                 })
                 .store(in: &subscriptions)
         }
