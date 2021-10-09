@@ -27,6 +27,6 @@ extension MainARView {
         robot.components[AnchoringComponent.self] = AnchoringComponent(AnchoringComponent.Target.plane(.horizontal,
                                                                                                        classification: .any,
                                                                                                        minimumBounds: [1,1]))
-        scene.addAnchor(robot)
+//        scene.addAnchor(robot)
     }
 }

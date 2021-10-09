@@ -9,7 +9,7 @@ import Foundation
 import RealityKit
 import Combine
 
-class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics, WalkingComponent {
+class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
     // MARK: - Declaration
     var robot: Entity?
     var subscriptions: Set<AnyCancellable> = []
@@ -30,7 +30,6 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics, WalkingComponen
         addRobot()
         name = "Mega robot"
         addAnchoring()
-        addPhysics()
     }
 
     required init() { fatalError("init() has not been implemented") }
@@ -47,13 +46,16 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics, WalkingComponen
                 
                 // Will generate collision boxes automatically also for children
                 self.generateCollisionShapes(recursive: true)
-
+                
                 if let walkingAnimation = robot.availableAnimations.first {
-                    self.walkAnimationController = robot.playAnimation(walkingAnimation.repeat(duration: .infinity),
-                                                                   transitionDuration: 1.25,
-                                                                   blendLayerOffset: 0,
-                                                                   separateAnimatedValue: false,
-                                                                   startsPaused: false)
+                    self.walkAnimationController = robot.playAnimation(
+                        walkingAnimation.repeat(duration: .infinity),
+                        transitionDuration: 1.25,
+                        blendLayerOffset: 0,
+                        separateAnimatedValue: false,
+                        startsPaused: false
+                    )
+                    
                     self.walkAnimationController?.pause()
                 }
                 self.robot = robot
@@ -62,18 +64,13 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics, WalkingComponen
     }
     
     func addAnchoring() {
-        let anchorPlane = AnchoringComponent.Target.plane(.horizontal,
-                                                          classification: .floor,
-                                                          minimumBounds: SIMD2<Float>.init(x: 1, y: 1))
+        let anchorPlane = AnchoringComponent.Target.plane(
+            .horizontal,
+            classification: .floor,
+            minimumBounds: SIMD2<Float>.init(x: 1, y: 1)
+        )
+        
         let anchorComponent = AnchoringComponent(anchorPlane)
         self.anchoring = anchorComponent
     }
-    
-    func addPhysics() {
-//        self.physics
-//        components[PhysicsMotionComponent.self] = [PhysicsMotionComponent.init()]
-//        components[PhysicsBodyComponent.self] = [PhysicsBodyComponent.init()]
-        physicsBody?.mode = .dynamic
-    }
-    
 }
