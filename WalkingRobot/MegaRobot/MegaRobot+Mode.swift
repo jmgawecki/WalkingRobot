@@ -108,34 +108,34 @@
 //        }
 //    }
 //    
-////    func randomPath(from currentTransform: Transform) -> (SIMD3<Float>, TimeInterval)? {
-////        // Get the robot's current transform and translation
-////        let robotTranslation = currentTransform.translation
-////
-////        // Generate random distances for a model to cross, relative to origin
-////        // User random relatively to the anchor entity's origin so that it wont go outside the box
-////        let randomXTranslation = Float.random(in: 0.2...0.5) * [-1.0,1.0].randomElement()!
-////        let randomZTranslation = Float.random(in: 0.1...0.4) * [-1.0,1.0].randomElement()!
-////
-////        // Create a translation relative to the current transform
-////        // Use realative to let him walk as far long as he wants to
-////        let relativeXTranslation = robotTranslation.x + randomXTranslation
-////        let relativeZTranslation = robotTranslation.z + randomZTranslation
-////
-////        // Find a path
-////        var path = (randomXTranslation * randomXTranslation + randomZTranslation * randomZTranslation).squareRoot()
-////
-////        // Path only positive
-////        if path < 0 { path = -path }
-////
-////        // Calculate the time of walking based on the distance and default speed
-//////        let timeOfWalking: Float = path / gameSettings.robotSpeed
-////
-////        // Based on old trasnlation calculate the new one
-////        let newTranslation: SIMD3<Float> = [randomXTranslation,
-////                                            Float(0),
-////                                            randomZTranslation]
-////
-//////        return (newTranslation, TimeInterval(timeOfWalking))
-////    }
+//    func randomPath(from currentTransform: Transform) -> (SIMD3<Float>, TimeInterval)? {
+//        // Get the robot's current transform and translation
+//        let robotTranslation = currentTransform.translation
+//
+//        // Generate random distances for a model to cross, relative to origin
+//        // User random relatively to the anchor entity's origin so that it wont go outside the box
+//        let randomXTranslation = Float.random(in: 0.2...0.5) * [-1.0,1.0].randomElement()!
+//        let randomZTranslation = Float.random(in: 0.1...0.4) * [-1.0,1.0].randomElement()!
+//
+//        // Create a translation relative to the current transform
+//        // Use realative to let him walk as far long as he wants to
+//        let relativeXTranslation = robotTranslation.x + randomXTranslation
+//        let relativeZTranslation = robotTranslation.z + randomZTranslation
+//
+//        // Find a path
+//        var path = (randomXTranslation * randomXTranslation + randomZTranslation * randomZTranslation).squareRoot()
+//
+//        // Path only positive
+//        if path < 0 { path = -path }
+//
+//        // Calculate the time of walking based on the distance and default speed
+////        let timeOfWalking: Float = path / gameSettings.robotSpeed
+//
+//        // Based on old trasnlation calculate the new one
+//        let newTranslation: SIMD3<Float> = [randomXTranslation,
+//                                            Float(0),
+//                                            randomZTranslation]
+//
+////        return (newTranslation, TimeInterval(timeOfWalking))
+//    }
 //}

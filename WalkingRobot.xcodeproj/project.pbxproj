@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EF09E6D127117CE900316577 /* SettingsSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF09E6D027117CE900316577 /* SettingsSystem.swift */; };
+		EF09E6D32711814E00316577 /* TurnSystem.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF09E6D22711814E00316577 /* TurnSystem.swift.swift */; };
+		EF09E6D52711833100316577 /* TranslationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF09E6D42711833100316577 /* TranslationSystem.swift */; };
 		EF2463E6270996B2009F4E0B /* MainARView+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */; };
 		EF2463E827099FF5009F4E0B /* metalShaders.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2463E727099FF5009F4E0B /* metalShaders.scnassets */; };
 		EF2463EB2709C367009F4E0B /* PlaneEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2463EA2709C367009F4E0B /* PlaneEntity.swift */; };
@@ -18,7 +20,6 @@
 		EF7CA76F270CBC6B00789EB3 /* WalkSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA76E270CBC6B00789EB3 /* WalkSystem.swift */; };
 		EF7CA773270CBF3600789EB3 /* Entity+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA772270CBF3600789EB3 /* Entity+Distance.swift */; };
 		EF7CA775270CBF7200789EB3 /* VectorMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA774270CBF7200789EB3 /* VectorMath.swift */; };
-		EF7CA777270CC41900789EB3 /* MotionSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA776270CC41900789EB3 /* MotionSystem.swift */; };
 		EF94678B27062D9700280832 /* toy_robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = EF94678A27062D9700280832 /* toy_robot.usdz */; };
 		EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */; };
 		EF9BE6892708FCBC00005114 /* MainARView+Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE6882708FCBC00005114 /* MainARView+Other.swift */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		EF09E6D027117CE900316577 /* SettingsSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSystem.swift; sourceTree = "<group>"; };
+		EF09E6D22711814E00316577 /* TurnSystem.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnSystem.swift.swift; sourceTree = "<group>"; };
+		EF09E6D42711833100316577 /* TranslationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSystem.swift; sourceTree = "<group>"; };
 		EF2463E5270996B2009F4E0B /* MainARView+ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+ARSessionDelegate.swift"; sourceTree = "<group>"; };
 		EF2463E727099FF5009F4E0B /* metalShaders.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = metalShaders.scnassets; sourceTree = "<group>"; };
 		EF2463EA2709C367009F4E0B /* PlaneEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneEntity.swift; sourceTree = "<group>"; };
@@ -41,7 +44,6 @@
 		EF7CA76E270CBC6B00789EB3 /* WalkSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkSystem.swift; sourceTree = "<group>"; };
 		EF7CA772270CBF3600789EB3 /* Entity+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Distance.swift"; sourceTree = "<group>"; };
 		EF7CA774270CBF7200789EB3 /* VectorMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorMath.swift; sourceTree = "<group>"; };
-		EF7CA776270CC41900789EB3 /* MotionSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSystem.swift; sourceTree = "<group>"; };
 		EF94678A27062D9700280832 /* toy_robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot.usdz; sourceTree = "<group>"; };
 		EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Configuration.swift"; sourceTree = "<group>"; };
 		EF9BE6882708FCBC00005114 /* MainARView+Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Other.swift"; sourceTree = "<group>"; };
@@ -86,8 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				EF7CA76E270CBC6B00789EB3 /* WalkSystem.swift */,
-				EF7CA776270CC41900789EB3 /* MotionSystem.swift */,
 				EF09E6D027117CE900316577 /* SettingsSystem.swift */,
+				EF09E6D22711814E00316577 /* TurnSystem.swift.swift */,
+				EF09E6D42711833100316577 /* TranslationSystem.swift */,
 			);
 			path = "Systems and Components";
 			sourceTree = "<group>";
@@ -243,9 +246,10 @@
 				EF09E6D127117CE900316577 /* SettingsSystem.swift in Sources */,
 				EFEA21132706234B0020C654 /* AppDelegate.swift in Sources */,
 				EF7CA773270CBF3600789EB3 /* Entity+Distance.swift in Sources */,
-				EF7CA777270CC41900789EB3 /* MotionSystem.swift in Sources */,
+				EF09E6D32711814E00316577 /* TurnSystem.swift.swift in Sources */,
 				EF3790402708CDF400FDE074 /* MainARView.swift in Sources */,
 				EF7CA76F270CBC6B00789EB3 /* WalkSystem.swift in Sources */,
+				EF09E6D52711833100316577 /* TranslationSystem.swift in Sources */,
 				EF2463EB2709C367009F4E0B /* PlaneEntity.swift in Sources */,
 				EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */,
 				EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */,

@@ -17,9 +17,6 @@ class WalkSystem: RealityKit.System {
     
     private static let query = EntityQuery(where: .has(WalkComponent.self))
     
-    // should always run before the MotionSystem, as it modifies it
-    static var dependencies: [SystemDependency] { [.before(MotionSystem.self)]}
-    
     required init(scene: Scene) { }
     
     func update(context: SceneUpdateContext) {
@@ -28,7 +25,6 @@ class WalkSystem: RealityKit.System {
         walkers.forEach({ entity in
             guard
                 var walker = entity.components[WalkComponent.self] as? WalkComponent,
-                let _ = entity.components[MotionComponent.self] as? MotionComponent,
                 let settings = entity.components[SettingsComponent.self] as? SettingsComponent
             else { return }
             
@@ -51,6 +47,7 @@ class WalkSystem: RealityKit.System {
                 fixedDestination.y = Float(0)
 
                 // If there is any obstacle on the way to the destination, set that obstacle as the destination so it wont pass it, perhaps through the wall
+                
                 let obstacles = context.scene.raycast(
                     from: entity.position,
                     to: fixedDestination,
@@ -70,6 +67,12 @@ class WalkSystem: RealityKit.System {
                 newTransform.translation = walker.destination!
                 
                 let travelTime = TimeInterval(entity.distance(from: walker.destination!) / settings.robotSpeed)
+                
+//                entity.look(
+//                    at: newTransform.translation,
+//                    from: entity.transform.translation,
+//                    relativeTo: entity.parent
+//                )
                 
                 entity.move(
                     to: newTransform,

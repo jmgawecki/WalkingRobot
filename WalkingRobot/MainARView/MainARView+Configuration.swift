@@ -16,6 +16,12 @@ extension MainARView: ARCoachingOverlayViewDelegate {
         configuration.frameSemantics = [.personSegmentationWithDepth]
         configuration.planeDetection = [.horizontal]
         
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.meshWithClassification) {
+            configuration.sceneReconstruction = .meshWithClassification
+        }
+        debugOptions = [.showSceneUnderstanding]
+        
+        environment.sceneUnderstanding.options = [.physics]
 //        debugOptions = [.showAnchorGeometry, .showAnchorOrigins, .showFeaturePoints, .showPhysics, .showSceneUnderstanding, .showAnchorGeometry]
         session.run(configuration, options: [.removeExistingAnchors])
     }

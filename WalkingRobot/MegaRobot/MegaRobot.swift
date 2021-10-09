@@ -30,7 +30,7 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
         addRobot()
         name = "Mega robot"
         addAnchoring()
-        components[MotionComponent.self] = MotionComponent()
+//        components[MotionComponent.self] = MotionComponent()
 //        components[WanderAimlesslyComponent.self] = WanderAimlesslyComponent()
 //        components[SettingsComponent.self] = SettingsComponent(settings: Settings())
 //        components[WalkComponent.self] = .init()
