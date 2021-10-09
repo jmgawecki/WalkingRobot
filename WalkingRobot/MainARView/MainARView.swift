@@ -34,10 +34,9 @@ class MainARView: ARView {
     lazy var ball: Entity = {
         let ball = MeshResource.generateSphere(radius: 0.3)
         let entity = ModelEntity(mesh: ball)
-        entity.generateCollisionShapes(recursive: false)
         entity.physicsBody = .init()
-        entity.transform.translation = SIMD3<Float>.init(x: 0, y: 1, z: 0)
-        installGestures(.translation, for: entity)
+        entity.generateCollisionShapes(recursive: true)
+        entity.transform.translation = SIMD3<Float>.init(x: 0, y: 2, z: 0)
         return entity
     }()
     
