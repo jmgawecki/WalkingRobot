@@ -20,23 +20,23 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
 //            print("Robot entered '\(currentStage)' mode")
 //        }
 //    }
-    var gameSettings: Settings
+//    var gameSettings: Settings
     var translationGesture: EntityGestureRecognizer?
     
     // MARK: - Initialiser
-    required init(gameSettings: Settings) {
-        self.gameSettings = gameSettings
+    required init() {
+//        self.gameSettings = gameSettings
         super.init()
         addRobot()
         name = "Mega robot"
         addAnchoring()
         components[MotionComponent.self] = MotionComponent()
-        components[WanderAimlesslyComponent.self] = WanderAimlesslyComponent()
-        components[SettingsComponent.self] = SettingsComponent(settings: Settings())
+//        components[WanderAimlesslyComponent.self] = WanderAimlesslyComponent()
+//        components[SettingsComponent.self] = SettingsComponent(settings: Settings())
 //        components[WalkComponent.self] = .init()
     }
 
-    required init() { fatalError("init() has not been implemented") }
+//    required init() { fatalError("init() has not been implemented") }
     
     func addRobot() {
         ModelEntity.loadAsync(named: "toy_robot")
@@ -71,12 +71,4 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
         let anchorComponent = AnchoringComponent(anchorPlane)
         self.anchoring = anchorComponent
     }
-    
-//    func addPhysics() {
-////        self.physics
-////        components[PhysicsMotionComponent.self] = [PhysicsMotionComponent.init()]
-////        components[PhysicsBodyComponent.self] = [PhysicsBodyComponent.init()]
-//        physicsBody?.mode = .dynamic
-//    }
-//
 }

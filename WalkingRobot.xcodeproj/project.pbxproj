@@ -14,14 +14,10 @@
 		EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903D2708CC3600FDE074 /* MegaRobot.swift */; };
 		EF3790402708CDF400FDE074 /* MainARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF37903F2708CDF400FDE074 /* MainARView.swift */; };
 		EF3790452708E8C300FDE074 /* MainARView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */; };
-		EF7CA76F270CBC6B00789EB3 /* WalkSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA76E270CBC6B00789EB3 /* WalkSystem.swift */; };
-		EF7CA771270CBCE100789EB3 /* WalkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA770270CBCE100789EB3 /* WalkComponent.swift */; };
+		EF7CA76F270CBC6B00789EB3 /* DestinationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA76E270CBC6B00789EB3 /* DestinationSystem.swift */; };
 		EF7CA773270CBF3600789EB3 /* Entity+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA772270CBF3600789EB3 /* Entity+Distance.swift */; };
 		EF7CA775270CBF7200789EB3 /* VectorMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA774270CBF7200789EB3 /* VectorMath.swift */; };
 		EF7CA777270CC41900789EB3 /* MotionSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA776270CC41900789EB3 /* MotionSystem.swift */; };
-		EF7CA779270CC44600789EB3 /* MotionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA778270CC44600789EB3 /* MotionComponent.swift */; };
-		EF7CA77D270CEFD600789EB3 /* WanderSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA77C270CEFD600789EB3 /* WanderSystem.swift */; };
-		EF7CA77F270CEFE800789EB3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7CA77E270CEFE800789EB3 /* Settings.swift */; };
 		EF94678B27062D9700280832 /* toy_robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = EF94678A27062D9700280832 /* toy_robot.usdz */; };
 		EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */; };
 		EF9BE6892708FCBC00005114 /* MainARView+Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9BE6882708FCBC00005114 /* MainARView+Other.swift */; };
@@ -40,14 +36,10 @@
 		EF37903D2708CC3600FDE074 /* MegaRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaRobot.swift; sourceTree = "<group>"; };
 		EF37903F2708CDF400FDE074 /* MainARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARView.swift; sourceTree = "<group>"; };
 		EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Gestures.swift"; sourceTree = "<group>"; };
-		EF7CA76E270CBC6B00789EB3 /* WalkSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkSystem.swift; sourceTree = "<group>"; };
-		EF7CA770270CBCE100789EB3 /* WalkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkComponent.swift; sourceTree = "<group>"; };
+		EF7CA76E270CBC6B00789EB3 /* DestinationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSystem.swift; sourceTree = "<group>"; };
 		EF7CA772270CBF3600789EB3 /* Entity+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Distance.swift"; sourceTree = "<group>"; };
 		EF7CA774270CBF7200789EB3 /* VectorMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorMath.swift; sourceTree = "<group>"; };
 		EF7CA776270CC41900789EB3 /* MotionSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSystem.swift; sourceTree = "<group>"; };
-		EF7CA778270CC44600789EB3 /* MotionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionComponent.swift; sourceTree = "<group>"; };
-		EF7CA77C270CEFD600789EB3 /* WanderSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderSystem.swift; sourceTree = "<group>"; };
-		EF7CA77E270CEFE800789EB3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		EF94678A27062D9700280832 /* toy_robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_robot.usdz; sourceTree = "<group>"; };
 		EF9BE6852708FBE800005114 /* MainARView+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Configuration.swift"; sourceTree = "<group>"; };
 		EF9BE6882708FCBC00005114 /* MainARView+Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Other.swift"; sourceTree = "<group>"; };
@@ -91,12 +83,8 @@
 		EF7CA77A270CC64000789EB3 /* Systems and Components */ = {
 			isa = PBXGroup;
 			children = (
-				EF7CA76E270CBC6B00789EB3 /* WalkSystem.swift */,
-				EF7CA770270CBCE100789EB3 /* WalkComponent.swift */,
+				EF7CA76E270CBC6B00789EB3 /* DestinationSystem.swift */,
 				EF7CA776270CC41900789EB3 /* MotionSystem.swift */,
-				EF7CA778270CC44600789EB3 /* MotionComponent.swift */,
-				EF7CA77C270CEFD600789EB3 /* WanderSystem.swift */,
-				EF7CA77E270CEFE800789EB3 /* Settings.swift */,
 			);
 			path = "Systems and Components";
 			sourceTree = "<group>";
@@ -245,7 +233,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3790452708E8C300FDE074 /* MainARView+Gestures.swift in Sources */,
-				EF7CA771270CBCE100789EB3 /* WalkComponent.swift in Sources */,
 				EF9BE68C2708FD3E00005114 /* MegaRobot+Mode.swift in Sources */,
 				EFEA21152706234B0020C654 /* ContentView.swift in Sources */,
 				EF9BE6892708FCBC00005114 /* MainARView+Other.swift in Sources */,
@@ -254,15 +241,12 @@
 				EF7CA773270CBF3600789EB3 /* Entity+Distance.swift in Sources */,
 				EF7CA777270CC41900789EB3 /* MotionSystem.swift in Sources */,
 				EF3790402708CDF400FDE074 /* MainARView.swift in Sources */,
-				EF7CA779270CC44600789EB3 /* MotionComponent.swift in Sources */,
-				EF7CA76F270CBC6B00789EB3 /* WalkSystem.swift in Sources */,
+				EF7CA76F270CBC6B00789EB3 /* DestinationSystem.swift in Sources */,
 				EF2463EB2709C367009F4E0B /* PlaneEntity.swift in Sources */,
-				EF7CA77D270CEFD600789EB3 /* WanderSystem.swift in Sources */,
 				EF37903E2708CC3600FDE074 /* MegaRobot.swift in Sources */,
 				EF9BE6862708FBE800005114 /* MainARView+Configuration.swift in Sources */,
 				EF7CA775270CBF7200789EB3 /* VectorMath.swift in Sources */,
 				EF2463ED2709C3B2009F4E0B /* UIHelper.swift in Sources */,
-				EF7CA77F270CEFE800789EB3 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

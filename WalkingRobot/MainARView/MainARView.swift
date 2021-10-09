@@ -13,7 +13,7 @@ import RealityKit
 class MainARView: ARView {
     // MARK: - Game Status
     let coachingOverlay = ARCoachingOverlayView()
-    var gameSettings = Settings()
+//    var gameSettings = Settings()
     
     // MARK: - Declaration
     var robot: MegaRobot?
@@ -25,22 +25,21 @@ class MainARView: ARView {
         }
     }
     
+    var robotECS: Entity?
+    
     // MARK: - Initialiser
     required init() {
         super.init(frame: .zero)
-//        robot = MegaRobot(gameSettings: gameSettings)
-        
         let plane = AnchorEntity(plane: .horizontal, classification: .any, minimumBounds: [1,1])
         scene.addAnchor(plane)
         
-        let box = ModelEntity.loadAsync(named: "toy_robot")
+        let robot = ModelEntity.loadAsync(named: "toy_robot")
             .sink { _ in
                 print("completed")
             } receiveValue: { robot in
-                robot.components[MotionComponent.self] = MotionComponent()
-                robot.components[WanderAimlesslyComponent.self] = WanderAimlesslyComponent()
-                robot.components[SettingsComponent.self] = SettingsComponent(settings: Settings())
                 plane.addChild(robot)
+                robot.components[MotionComponent.self] = MotionComponent()
+                robot.components[DestinationComponent.self] = DestinationComponent()
             }
             .store(in: &subscriptions)
 
