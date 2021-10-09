@@ -8,14 +8,14 @@
 import Foundation
 import RealityKit
 
-struct DestinationComponent: RealityKit.Component {
+struct WalkComponent: RealityKit.Component {
     var destination: SIMD3<Float>?
-    var velocity: Float = 0.03
+    var velocity: Float = 0.05
 }
 
-class DestinationSystem: RealityKit.System {
+class WalkSystem: RealityKit.System {
     
-    private static let query = EntityQuery(where: .has(DestinationComponent.self))
+    private static let query = EntityQuery(where: .has(WalkComponent.self))
     
     // should always run before the MotionSystem, as it modifies it
     static var dependencies: [SystemDependency] { [.before(MotionSystem.self)]}
@@ -24,15 +24,18 @@ class DestinationSystem: RealityKit.System {
     
     func update(context: SceneUpdateContext) {
         let walkers = context.scene.performQuery(Self.query)
-
+        
         walkers.forEach({ entity in
-            guard var walker = entity.components[DestinationComponent.self] as? DestinationComponent,
-                  let _ = entity.components[MotionComponent.self] as? MotionComponent else { return }
-
+            guard
+                var walker = entity.components[WalkComponent.self] as? WalkComponent,
+                let _ = entity.components[MotionComponent.self] as? MotionComponent,
+                let settings = entity.components[SettingsComponent.self] as? SettingsComponent
+            else { return }
+            
             defer {
-                entity.components[DestinationComponent.self] = walker
+                entity.components[WalkComponent.self] = walker
             }
-
+            
             // set the default destination to 0
             var distanceFromDestination: Float = 0
 
@@ -62,6 +65,18 @@ class DestinationSystem: RealityKit.System {
                 }
 
                 walker.destination = fixedDestination
+                
+                var newTransform = entity.transform
+                newTransform.translation = walker.destination!
+                
+                let travelTime = TimeInterval(entity.distance(from: walker.destination!) / settings.robotSpeed)
+                
+                entity.move(
+                    to: newTransform,
+                    relativeTo: entity.parent,
+                    duration: travelTime,
+                    timingFunction: .linear
+                )
             }
         })
     }

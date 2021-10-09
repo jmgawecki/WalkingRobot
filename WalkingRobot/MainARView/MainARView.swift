@@ -39,7 +39,17 @@ class MainARView: ARView {
             } receiveValue: { robot in
                 plane.addChild(robot)
                 robot.components[MotionComponent.self] = MotionComponent()
-                robot.components[DestinationComponent.self] = DestinationComponent()
+                robot.components[WalkComponent.self] = WalkComponent()
+                robot.components[SettingsComponent.self] = SettingsComponent.init()
+                if let animation = robot.availableAnimations.first {
+                    robot.playAnimation(
+                        animation.repeat(duration: .infinity),
+                        transitionDuration: 1.25,
+                        blendLayerOffset: 0,
+                        separateAnimatedValue: false,
+                        startsPaused: false
+                    )
+                }
             }
             .store(in: &subscriptions)
 
