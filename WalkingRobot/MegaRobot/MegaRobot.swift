@@ -50,14 +50,16 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
                 
                 // Will generate collision boxes automatically also for children
                 self.generateCollisionShapes(recursive: true)
-
+                
                 if let walkingAnimation = robot.availableAnimations.first {
-                    self.walkAnimationController = robot.playAnimation(walkingAnimation.repeat(duration: .infinity),
-                                                                   transitionDuration: 1.25,
-                                                                   blendLayerOffset: 0,
-                                                                   separateAnimatedValue: false,
-                                                                   startsPaused: false)
-//                    self.walkAnimationController?.pause()
+                    self.walkAnimationController = robot.playAnimation(
+                        walkingAnimation.repeat(duration: .infinity),
+                        transitionDuration: 1.25,
+                        blendLayerOffset: 0,
+                        separateAnimatedValue: false,
+                        startsPaused: false
+                    )
+                    //                    self.walkAnimationController?.pause()
                 }
                 self.robot = robot
             }
@@ -65,9 +67,11 @@ class MegaRobot: Entity, HasCollision, HasAnchoring, HasPhysics {
     }
     
     func addAnchoring() {
-        let anchorPlane = AnchoringComponent.Target.plane(.horizontal,
-                                                          classification: .floor,
-                                                          minimumBounds: SIMD2<Float>.init(x: 1, y: 1))
+        let anchorPlane = AnchoringComponent.Target.plane(
+            .horizontal,
+            classification: .floor,
+            minimumBounds: SIMD2<Float>.init(x: 1, y: 1)
+        )
         let anchorComponent = AnchoringComponent(anchorPlane)
         self.anchoring = anchorComponent
     }

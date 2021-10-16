@@ -19,17 +19,12 @@ class MainARView: ARView {
     var subscriptions: Set<AnyCancellable> = []
     var robotAnchoringSubscription: Cancellable?
     
-//    var gestureRecogniser: EntityGestureRecognizer? {
-//        didSet {
-////            gestureRecogniser?.addTarget(self, action: #selector(handleRobotTranslation(_:)))
-//        }
-//    }
-    
     let plane = AnchorEntity(
         plane: .horizontal,
         classification: .floor,
         minimumBounds: [2,2]
     )
+    
     
     lazy var ball: Entity = {
         let ball = MeshResource.generateSphere(radius: 0.3)
@@ -73,40 +68,4 @@ class MainARView: ARView {
     
     @MainActor @objc required dynamic init?(coder decoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
-    
-//    func observeAnchorState() {
-//        if let robot = robot {
-////            self.gameSettings.gameStatus = .planeSearching
-//            self.robotAnchoringSubscription = self.scene.subscribe(
-//                to: SceneEvents.AnchoredStateChanged.self,
-//                on: robot) { [weak self] robotEvent in
-//                    guard let self = self else { return }
-//                    if robotEvent.isAnchored {
-////                        self.gameSettings.gameStatus = .positioning
-////                        robot.stage()
-////                        robot.walkAnimationController?.resume()
-////                        self.observeAnimationState()
-//                        self.gestureRecogniser = self.installGestures(.translation, for: robot).first
-//                        DispatchQueue.main.async {
-//                            self.robotAnchoringSubscription?.cancel()
-//                            self.robotAnchoringSubscription = nil
-//                        }
-//                    }
-//                }
-//            self.scene.anchors.append(robot)
-//        } else {
-//            print("Fail to load")
-//        }
-//    }
-//
-//    func observeAnimationState() {
-//        if let robot = robot {
-//            self.scene.subscribe(
-//                to: AnimationEvents.PlaybackCompleted.self,
-//                on: robot.robot, { _ in
-////                    robot.stage()
-//                })
-//                .store(in: &subscriptions)
-//        }
-//    }
 }

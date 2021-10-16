@@ -41,6 +41,7 @@
 		EF37903D2708CC3600FDE074 /* MegaRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaRobot.swift; sourceTree = "<group>"; };
 		EF37903F2708CDF400FDE074 /* MainARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARView.swift; sourceTree = "<group>"; };
 		EF3790442708E8C300FDE074 /* MainARView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainARView+Gestures.swift"; sourceTree = "<group>"; };
+		EF5103862711E07D007B69A0 /* AR Session 3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "AR Session 3.mov"; path = "../../../../../Downloads/AR Session 3.mov"; sourceTree = "<group>"; };
 		EF7CA76E270CBC6B00789EB3 /* WalkSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkSystem.swift; sourceTree = "<group>"; };
 		EF7CA772270CBF3600789EB3 /* Entity+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+Distance.swift"; sourceTree = "<group>"; };
 		EF7CA774270CBF7200789EB3 /* VectorMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorMath.swift; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		EFEA21062706234B0020C654 = {
 			isa = PBXGroup;
 			children = (
+				EF5103862711E07D007B69A0 /* AR Session 3.mov */,
 				EFEA21112706234B0020C654 /* WalkingRobot */,
 				EF3790412708E53F00FDE074 /* Support */,
 				EF94678A27062D9700280832 /* toy_robot.usdz */,

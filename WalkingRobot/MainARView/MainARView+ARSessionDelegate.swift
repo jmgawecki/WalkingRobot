@@ -21,7 +21,10 @@ extension MainARView: ARSessionDelegate {
         case .mapped:
             scene.addAnchor(plane)
             plane.addChild(ball)
-            self.installGestures(.translation, for: ball as! HasCollision)
+            self.installGestures(
+                .translation,
+                for: ball as! HasCollision
+            )
         @unknown default:
             break
         }
