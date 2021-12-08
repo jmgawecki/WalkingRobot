@@ -17,16 +17,19 @@ extension MainARView {
                 self.addRobot(robot: robot)
             }
             .store(in: &subscriptions)
-
+        
     }
     
-    @discardableResult
     func addRobot(robot: Entity) {
         let robot = robot
         robot.components[WalkingComponent.self] = WalkingComponent()
-        robot.components[AnchoringComponent.self] = AnchoringComponent(AnchoringComponent.Target.plane(.horizontal,
-                                                                                                       classification: .any,
-                                                                                                       minimumBounds: [1,1]))
-//        scene.addAnchor(robot)
+        robot.components[AnchoringComponent.self] = AnchoringComponent(
+            AnchoringComponent.Target.plane(
+                .horizontal,
+                classification: .any,
+                minimumBounds: [1,1]
+            )
+        )
+        //        scene.addAnchor(robot)
     }
 }
